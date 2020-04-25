@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  mongodb:
+    image: 'mongo:${VERSION}'
+    ports:
+      - '27017:27017'
+    volumes:
+      - 'data:/bitnami/mongo/data'
+volumes:
+  data:
+    driver: local
